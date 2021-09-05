@@ -22,7 +22,7 @@ $(document).ready(function() {
 	console.log("--- $p.get(1) ---")
 	console.log($p.get(1))
 
-	//JS DOM객체로 반환하기
+	//JS DOM객체로 반환하기 -> 배열이라고 생각하기
 	console.log("--- $p[1] ---")
 	console.log($p[1])
 
@@ -41,7 +41,8 @@ $(document).ready(function() {
 	var $p2 = $(p[2])
 	
 	//jQuery 객체에 스타일 적용하기
-	$p2.css("border", "1px  solid tomato")
+// 	$p2.css("border", "1px solid tomato")
+	$(p[2]).css("border", "1px solid tomato")
 	
 	//----------------------------------------------------------------------------
 	
@@ -51,6 +52,7 @@ $(document).ready(function() {
 	
 	//----------------------------------------------------------------------------
 	
+	//순차적으로 노드 접근하기(반복문 API)
 	$("p").each(function(i, e) {
 		console.log("---", i, "---")
 		console.log(e) //JS DOM객체

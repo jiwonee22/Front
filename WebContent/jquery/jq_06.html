@@ -20,21 +20,33 @@ $(document).ready(function() {
 	
 	//---------------------------------------------------------------------------
 	
-	console.log("------------")
+	console.log("-----$('#here')-----")
 	console.log($("#here"))
 	
-	console.log("------------")
+	console.log("-----$('#here').parent()-----")
 	console.log($("#here").parent())
 		
-	console.log($("#here").parents())
-	console.log($("#here").parents("#third"))
+	console.log("-----$('#here').parents()-----")
+	console.log($("#here").parents())	//상속구조 전체를 보여줌
 	
-	console.log("------------")
+	console.log("-----$('#here').parents('#third')-----")
+	console.log($("#here").parents("#third")) //조상중 id가 third인 조상
+	
+	console.log("-----$('third').prev()-----")
 	console.log($("#third").prev())
+	
+	console.log("-----$('#third').prevAll()-----")
 	console.log($("#third").prevAll())
 	
+	console.log("-----$('third').next()-----")
+	console.log( $("#third").next() )
+
+	console.log("-----$('#third').nextAll()-----")
+	console.log( $("#third").nextAll() )
+	//--------------------------------------------------------
+	
 	//#here에 클릭 이벤트 처리 코드 등록
-	 $("here").click(function(){
+	 $("#here").click(function(){
 		 $(this).parent().parent().next().css("color", "red")
 	 })
 	
