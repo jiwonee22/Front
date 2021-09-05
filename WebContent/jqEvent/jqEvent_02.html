@@ -18,7 +18,7 @@ $(document).ready(function() {
 		, "mouseleave" : blue
 	})
 
-	//-----------------------------------------------
+// 	//-----------------------------------------------
 	
 	$("#btnAlert").one({
 		"click" : sayHi
@@ -28,7 +28,7 @@ $(document).ready(function() {
 	
 	//-----------------------------------------------
 	
-	//on, one으로 등록된 이벤트 리스너를 모두 제거한다
+	//on, one으로 등록된 이벤트 리스너(click)를 모두 제거한다
 	$("button").off("click")
 	
 	//-----------------------------------------------
@@ -43,8 +43,13 @@ $(document).ready(function() {
 		
 		
 		//#btnAlert에 dblclick이벤트 발생시키기
-// 		$("#btnAlert").dblclick()
-		$("#btnAlert").trigger("dblclick")
+		$("#btnAlert").trigger("dblclick") 
+		//trigger -> btnOK버튼에 mouseover 동작이 발생했을 때
+		//btnAlert에 dblclick이 발생하지 않아도 임의로 발생하게 함
+		
+		//$("#btnAlert").dblclick()
+		//-> 매개변수 없이 이벤트 이름을 사용해서 함수로 호출하면
+		//trigger함수의 축약 코드
 	})
 	
 	

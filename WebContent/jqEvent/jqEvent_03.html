@@ -22,8 +22,6 @@ $(document).ready(function() {
 	
 	//------------------------------------------------------
 	
-
-	
 	$("#btnSend").click(function() {
 		console.log("btnSend clicked")
 		
@@ -66,15 +64,17 @@ $(document).ready(function() {
 	})
 	
 	//----------------------------------------------------------------
-	$("btnSend").prop("disabled", true)
+	$("#btnSend").prop("disabled", true)
 
 	$("input[mname~='msg']").keyup(function() {
 		console.log("keyup", $(this).val())
 		
-		if( $(this).val() == '') {
-			$(this).next().prop("disabled", true)
-		} else if { $(this).val() != '' {
+		if($(this).val() == '') {
+			$(this).next().prop("disabled", true) 
+			//키보드에서 손을 뗐을 때 내용이 없으면 전송 버튼 비활성화
+		} else if ($(this).val() != '') {
 			$(this).next().prop("disabled", false)
+			//키보드에서 손을 뗐을 때 내용이 있으면 전송 버튼 활성화
 		}
 	})
 

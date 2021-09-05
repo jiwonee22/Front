@@ -12,6 +12,10 @@ $(document).ready(function() {
 	
 	$("div").attr("class", "st4")
 	
+	//	-> 속성의 값이 전부 변경된다
+	//	-> 단어마다 의미를 가지는 class 속성을
+	//		attr()함수로 변경할 때에는 주의할 것
+	
 	//-------------------------------------------------------------
 	
 	//id속성 부여하기
@@ -30,7 +34,7 @@ $(document).ready(function() {
 	
 	$("p").eq(2).css("background", "tomato");
 	
-	$("p").eq(2).attr("background", "tomato");
+// 	$("p").eq(2).attr("background", "tomato");
 	//	-> background가 일반 속성으로 들어간다
 	
 	//-------------------------------------------------------------
@@ -56,12 +60,14 @@ $(document).ready(function() {
 </script>
 
 <style type="text/css">
+
 .red {
-	color:red;
+	color: red;
 }
 .blue {
 	color: blue;
 }
+
 </style>
 
 </head>
