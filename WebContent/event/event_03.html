@@ -10,9 +10,9 @@ window.onload = function() {
 	
 	//--------------------------------------------
 	
-// 	btnOk.addEventListener("click", function() {
-// 		alert("확인버튼 클릭됨")		
-// 	})
+	btnOk.addEventListener("click", function() {
+		alert("확인버튼 클릭됨")		
+	})
 	
 	//이벤트 리스너 해제되지 않음
 	btnOk.removeEventListener("click", function() {
@@ -50,10 +50,6 @@ window.onload = function() {
 			
 } //window.onload end
 
-function clicked() {
-	alert("확인버튼이 클릭되었습니다")
-}
-
 function changeColorRed() {
 // 	btnTest.style.color = "red" //인라인 Style적용
 	btnTest.setAttribute("class", "colorRed") //임베디드 Style적용
@@ -61,14 +57,18 @@ function changeColorRed() {
 
 function changeColorBlack() {
 // 	btnTest.style.color = "black" //인라인 Style적용
-	btnTest.setAttribute("class") //임베디드 Style적용
+	btnTest.removeAttribute("class") //임베디드 Style적용
+}
+
+function clicked() {
+	alert("확인버튼이 클릭되었습니다")
 }
 
 </script>
 
 <style type="text/css">
 
-colorRed {
+.colorRed {
 	color: red;
 }
 

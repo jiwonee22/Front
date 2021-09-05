@@ -8,6 +8,7 @@ function showAlert() {
 	console.log("--- alert ---")
 	
 	var res = alert("메세지만 출력되는 알림창")
+	
 	console.log(res) //undefined, 반환값 없음
 }
 
@@ -15,6 +16,7 @@ function showConfirm() {
 	console.log("--- confirm ---")
 	
 	var res = confirm("찬성이면 확인, 반대면 취소를 누르세요")
+	
 	console.log(res)
 	
 	//반환타입: boolean
@@ -36,7 +38,7 @@ function showPrompt() {
 	
 	//반환타입: String
 	//	텍스트필드에 입력한 내용 - 확인버튼 클릭, 엔터키 입력
-	//	null - 취소버튼 클릭, esc키 입력
+	//	null - 취소버튼 클릭, esc키 입력  
 	
 	//	** 아무것도 작성하지 않고 확인버튼 누르면 ""빈문자열 반환된다
 	
